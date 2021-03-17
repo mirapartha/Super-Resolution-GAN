@@ -268,7 +268,7 @@ def show_tensor_images(image_tensor):
     image_grid = make_grid(image_unflat[:4], nrow=4)
     plt.axis('off')
     plt.imshow(image_grid.permute(1, 2, 0).squeeze())
-    plt.show()
+    #plt.show()
     return image_grid
 
 def train_srresnet(srresnet, dataloader, device, lr=1e-4, total_steps=1e6, display_step=500):
