@@ -265,7 +265,7 @@ def show_tensor_images(image_tensor):
     '''
     image_tensor = (image_tensor + 1) / 2
     image_unflat = image_tensor.detach().cpu()
-    image_grid = make_grid(image_unflat[:4], nrow=4)
+    image_grid = make_grid(image_unflat[:5], nrow=5)
     plt.axis('off')
     plt.imshow(image_grid.permute(1, 2, 0).squeeze())
     #plt.show()
